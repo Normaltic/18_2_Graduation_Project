@@ -1,0 +1,39 @@
+.SideMenu_LogoWrapper {
+	height: 20%;
+	flex-direction: column;
+}
+
+.SideMenu_LogoWrapper_Void {
+	flex: 1;
+}
+
+.SideMenu_LogoFrame {
+	flex: none;
+	height: auto;
+	cursor: pointer;
+}
+
+.SideMenu_AuthFrame {
+	flex: none;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	height: 150px;
+}
+
+.Auth_FlatButton_Inline_Span {
+	vertical-align: initial;
+}
+
+.SideMenu_LectureNavFrame {
+	flex: 1;
+	background-color: #404040;
+	color: white;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}

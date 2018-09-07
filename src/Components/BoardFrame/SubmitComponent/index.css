@@ -1,0 +1,23 @@
+.SubmitComponent_Children {
+	flex-direction: row;
+	border: 2px solid black;
+	margin: 15px;
+	padding: 25px;
+}
+
+.SubmitComponent_Children_StudentList {
+	width: 200px;
+	padding: 15px;
+}
+
+.SubmitComponent_Children_SubmitDataView{
+	padding: 15px;
+}
+
+.SubmitComponent_SelectedView {
+	flex-direction: column;
+}
+
+.SubmitComponent_LastSubmitView {
+	flex-direction: column;
+}

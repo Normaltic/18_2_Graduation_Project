@@ -1,0 +1,22 @@
+.Static_Flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.Static_Flex_Justify_Center {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.Static_Flex_Align_Center {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.Static_Divider {
+	background-color: black;
+	height: 2px;
+}

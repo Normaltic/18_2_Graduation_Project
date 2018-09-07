@@ -1,0 +1,4 @@
+.UserView_ButtonList {
+	flex-direction: row;
+	justify-content: space-around;
+}

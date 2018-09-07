@@ -1,0 +1,31 @@
+.ToolMenu_ToolBox {
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.ToolMenu_ImageStyle {
+}
+
+.ToolMenu_ToolOptionBox {
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-bottom: 13px;
+	padding-right: 15px;
+	
+	border: 1px solid black;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.ToolMenu_OtherTools {
+
+}

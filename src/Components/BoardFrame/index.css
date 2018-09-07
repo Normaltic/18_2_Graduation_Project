@@ -1,0 +1,61 @@
+.FrontCanvas {
+	position: absolute;
+	z-index: 10;
+}
+
+.BackCanvas {
+	position: absolute;
+	z-index: 3;
+}
+
+.UnderCanvas {
+	position: absolute;
+	z-index: -10;
+}
+
+.background {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	z-index: 0;
+	background-color: white;
+}
+
+.ToolMenu {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 1000;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+
+	width: 190px;
+	height: auto;
+	border: 1px solid black;
+	background: white;
+}
+
+.MiniToolMenu {
+	position: absolute;
+	z-index: 1000;
+	width: 233px;
+	height: 122px;
+	background: white;
+}
+
+.BottomMenu {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1000;
+
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+
+	border: 1px solid black;
+	background: white;
+}
