@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import * as submitContentAction from 'reducers/SubmitContent';
 
-import ListTable from 'Components/MainFrame/ContentFrame/ListContent/ListTable';
+import ListTable from 'Components/common/ListTable';
 import CreateSubmitModal from './CreateSubmitModal';
 import ViewSubmitModal from './WithIsTeacher';
 
@@ -81,7 +81,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(
 			let sName = document.getElementById(textFieldProps.id).value;
 
 			if( !sName ) {
-				console.log("NOT TYPED NAME");
+				alert("NOT TYPED NAME");
 				return;
 			}
 

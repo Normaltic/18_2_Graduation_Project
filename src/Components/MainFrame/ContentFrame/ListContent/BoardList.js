@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 import ModalDialog from 'Components/common/ModalDialog';
-import ListTable from './ListTable';
+import ListTable from 'Components/common/ListTable';
 
 export default class BoardList extends React.Component {
 
@@ -67,7 +67,7 @@ export default class BoardList extends React.Component {
 		let bName = document.getElementById(this.textField_style.id).value;
 
 		if( !bName ) {
-			console.log("NOT TYPED NAME");
+			alert("NOT TYPED NAME");
 			return;
 		}
 		this.props.createNewBoard(

@@ -92,7 +92,6 @@ class FrontCanvas extends React.Component {
 		this.toolBox = this.initializeToolBox(this.canvasContext);
 		this.initializeSocketObject();
 
-		console.log(this.props.match);
 		this.props.setUndoWork(this.undoWork);
 		this.props.setRedoWork(this.redoWork);
 		this.props.socketObject.emit('initializeUserInfo', {
@@ -104,12 +103,7 @@ class FrontCanvas extends React.Component {
 	}
 
 	shouldComponentUpdate(nextProps) {
-/*		const flag1 = nextProps.useTool != this.props.useTool;
-		const flag2 = nextProps.selectedPage != this.props.selectedPage;
-		const flag4 = nextProps.pageDataLength != this.props.pageDataLength;
-
-		return flag1 || flag2 || flag4;*/
-			if( nextProps.useTool === toolValue.type.TOOL_MOVE ) this.canvasElement.style.touchAction = 'auto';
+		if( nextProps.useTool === toolValue.type.TOOL_MOVE ) this.canvasElement.style.touchAction = 'auto';
 		else this.canvasElement.style.touchAction = 'none';
 
 		if ( nextProps.selectedPage != this.props.selectedPage ) {
@@ -124,33 +118,14 @@ class FrontCanvas extends React.Component {
 		return false;
 	}
 
-	componentWillUpdate(nextProps) {
-		console.log("Tic");
-/*		console.log(nextProps.selectedPage);
-		if( nextProps.useTool === toolValue.type.TOOL_MOVE ) this.canvasElement.style.touchAction = 'auto';
-		else this.canvasElement.style.touchAction = 'none';
-
-		if ( nextProps.selectedPage != this.props.selectedPage ) {
-			this.redrawCanvas(nextProps.selectedPage, nextProps.pageData);
-		} else if ( nextProps.pageDataLength < this.props.pageDataLength ) {
-			this.redrawCanvas(nextProps.selectedPage, nextProps.pageData);
-		} else if( nextProps.pageDataLength > this.props.pageDataLength ) {
-			for( let i = this.props.pageDataLength; i < nextProps.pageDataLength; i++ )
-				this.toolBox[nextProps.pageData[i].tool].reDrawWithData(nextProps.pageData[i]);
-			this.updatePreview();
-		};*/
-	}
-
 	componentWillUnmount() {
 		window.onbeforeunload = () => {};
 		this.handlePageOut();
 	}
 
-
 	initializeSocketObject() {
 		this.props.socketObject.on('initializeBoardData', (data) => {
 			this.props.setInitializeBoardContentStore(data.boardData, data.memoData);
-			console.log(data.submitData);
 			this.props.setSubmitListData(data.submitData);
 		});
 	}

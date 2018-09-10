@@ -73,7 +73,6 @@ export default (context) => {
 		imageData = null;
 		circle = null;
 		item.points.push({x,y});
-		console.log(item);
 		return [item];
 	};
 

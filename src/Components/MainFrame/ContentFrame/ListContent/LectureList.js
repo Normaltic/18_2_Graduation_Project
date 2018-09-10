@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import ListTable from './ListTable';
+import ListTable from 'Components/common/ListTable';
 
 export default (props) => {
 

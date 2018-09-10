@@ -34,13 +34,13 @@ export default (props) => {
 	return (
 		<div className="SubmitComponent_Children_SubmitDataView">
 			{ props.contentData.uNum + "   " + props.contentData.uName }
-		<div className="SubmitComponent_Children_SubmitDataContentView">
-			<img
-				border="2px solid black"
-				width="576"
-				height="324"
-				src={imageData} />
-		</div>
+			<div className="SubmitComponent_Children_SubmitDataContentView">
+				<img
+					border="2px solid black"
+					width="576"
+					height="324"
+					src={imageData} />
+			</div>
 		</div>
 	)
 

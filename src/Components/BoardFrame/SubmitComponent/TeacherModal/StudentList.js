@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListTable from 'Components/MainFrame/ContentFrame/ListContent/ListTable';
+import ListTable from 'Components/common/ListTable';
 
 const colGroupList = [
 	"30%", "70%",

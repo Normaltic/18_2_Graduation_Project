@@ -80,7 +80,7 @@ const ToolIcon = (toolType, selected, handleClick = () => {}) => {
          marginBottom: '3px',
 		 marginRight: '3px',
      }
-             //className="ToolMenu_ImageStyle"
+
      return (
          <img
              style={style}

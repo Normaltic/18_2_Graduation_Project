@@ -6,7 +6,7 @@ export default (props) => {
 		<div className={props.className + " Static_Flex Static_Flex_Align_Center Static_Flex_Justify_Center"}
 			onClick={props.handleMoveHome}>
 
-			<img src={require('./Logo.png')}
+			<img src={require('images/Logo.png')}
 				 width="200px" />
 
 		</div>

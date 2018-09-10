@@ -67,9 +67,6 @@ io.on('connection', (socket) => {
 				]);
 			})
 			.then( ( resultArray ) => {
-				console.log("---TeacherResultArray---");
-				console.log(resultArray);
-				console.log("------------------------");
 				io[data.b_id] = resultArray[0];
 				io.to(socket.id).emit('initializeBoardData', {
 					boardData: resultArray[0],
@@ -97,11 +94,6 @@ io.on('connection', (socket) => {
 			]);
 		})
 		.then( ( resultArray ) => {
-			console.log("---StudentResultArray---");
-			console.log(resultArray);
-			console.log("------------------------");
-			console.log(resultArray[0]);
-			console.log("------------------------");
 			io.to(socket.id).emit('initializeBoardData', {
 				boardData: resultArray[0],
 				submitData: resultArray[1],
@@ -130,9 +122,7 @@ io.on('connection', (socket) => {
 	});
 
 	socket.on('drawingTeachUndo', (data) => {
-		console.log(io[socket.nowJoined].itemList[data].items.length);
 		io[socket.nowJoined].itemList[data].items.pop();
-		console.log(io[socket.nowJoined].itemList[data].items.length);
 		socket.broadcast.to(`${socket.nowJoined}`).emit('broadcastTeachUndo', data);
 	});
 
@@ -148,7 +138,6 @@ io.on('connection', (socket) => {
 			items: [],
 		}
 		io[socket.nowJoined].itemList.push(pageStructure);
-		console.log(io[socket.nowJoined].itemList.length);
 		socket.broadcast.to(`${socket.nowJoined}`).emit('broadcastTeachCreatePage', {});
 	});
 
@@ -165,7 +154,6 @@ io.on('connection', (socket) => {
 	});
 
 	socket.on('exitStudent', (data) => {
-		console.log(data);
 		model_Memo.updateContents(socket.nowJoined, data.uNum, data.itemList)
 		.then(console.log)
 		.catch(console.err);
@@ -178,6 +166,4 @@ io.on('connection', (socket) => {
 		.then(console.log)
 		.catch(console.err);
 	});
-
-	socket.on('asd', console.log);
 })	

@@ -12,8 +12,6 @@ const SubmitContent = new Schema({
 
 SubmitContent.statics.findAllContent = function(b_id, submitList) {
 	if( submitList == [] ) return Promise(submitList);
-	console.log("dispatch findAllContent Method");
-	console.log(submitList);
 	return this.find(
 		{ b_id: b_id },
 		{ _id : 0, b_id: 0, }
@@ -25,8 +23,6 @@ SubmitContent.statics.findAllContent = function(b_id, submitList) {
 			item.contents = [];
 			return item;
 		});
-		console.log("mapping to list");
-		console.log(list);
 		for( let submitContent of resultArray ) list[submitContent.sNum-1].contents.push(submitContent);
 		return Promise.resolve(list);
 	})
@@ -73,8 +69,6 @@ SubmitContent.statics.UpdateOrCreate = function(b_id, data) {
 			});
 		}
 		else result.data = data.data;
-		console.log("result");
-		console.log(result);
 		return result.save();
 	})
 	.then( (result) => { return Promise.resolve(result) } )

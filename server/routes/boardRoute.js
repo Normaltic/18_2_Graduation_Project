@@ -50,7 +50,6 @@ route.post('/:lNum', (req, res) => {
 	.then( (boardList) => {
 		let date = getNowDate();
 
-	console.log("here");
 		return new Board({
 			lNum: lNum,
 			bNum: boardList.length + 1,
@@ -61,7 +60,6 @@ route.post('/:lNum', (req, res) => {
 		.save();
 	})
 	.then( (result) => {
-	console.log("here");
 		res.status(200).json(result);
 	})
 	.catch( (err) => {

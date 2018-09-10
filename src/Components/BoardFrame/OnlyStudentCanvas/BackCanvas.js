@@ -22,7 +22,6 @@ const mapDispatchToProps = (dispatch) => ({
 	pushTeachItem: (item) => dispatch(boardContentAction.pushTeachItem(item)),
 	undoTeachItem: (pageIndex) => dispatch(boardContentAction.undoTeachItem(pageIndex)),
 	setTeachPreview: (pageIndex, imageData) => dispatch(boardContentAction.setTeachPreview({pageIndex, imageData})),
-
 });
 
 class BackCanvas extends React.Component {
@@ -55,7 +54,6 @@ class BackCanvas extends React.Component {
 	}
 
 	componentWillUpdate(nextProps) {
-		console.log("Toc");
 		if( nextProps.selectedPage != this.props.selectedPage ) {
 				this.redrawCanvas(nextProps.selectedPage, nextProps.pageData);
 			return;
@@ -68,7 +66,6 @@ class BackCanvas extends React.Component {
 			for( let i = this.props.pageDataLength; i < nextProps.pageDataLength; i++ )
 				this.toolBox[nextProps.pageData[i].tool].reDrawWithData(nextProps.pageData[i]);
 			this.updatePreview();
-			console.log('did');
 		};			
 	}
 

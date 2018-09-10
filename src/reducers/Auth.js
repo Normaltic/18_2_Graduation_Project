@@ -63,7 +63,6 @@ export const SignOut = () => dispatch => {
 	} catch(e) {
 		dispatch(setStatusFailure());
 		console.log(e);
-		
 	}	
 }
 

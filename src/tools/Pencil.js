@@ -88,14 +88,6 @@ export default (context) => {
 	};
 
 	const reDrawWithData = (item, animate) => {
-		/*
-		const j = item.points.length;
-		for(let i = 0; i < j; i++ ) {
-			if( !item.points[i-1] ) continue;
-			else {
-				drawLine(item, item.points[i-1], item.points[i]);
-			}
-		}*/
 		drawLine(item);
 	};
 

@@ -97,7 +97,6 @@ export default handleActions({
 		}
 		
 		if( needToPush ) submitList[sNum-1].contents.push(data);
-		console.log(submitList[sNum-1]);
 
 		return state.set('submitList', submitList);
 	},

@@ -33,14 +33,13 @@ export default connect(mapStateToProps, mapDispatchToProps)(
 				sNum: props.selectedIndex + 1,
 				data: itemData
 			});
-//			props.handleClose();
+			props.handleClose();
 		}
 
 		const actions = [
 			<FlatButton secondary={true} label="Cancel" onClick={props.handleClose} />,
 			<FlatButton primary={true} label="Submit" onClick={handleSubmitContent} />
 		]
-		//<LastSubmitContent contents={props.submitData.contents} />
 
 		return (
 			<Dialog
@@ -59,6 +58,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(
 							height="216"
 							src={props.previewImage} />
 					</div>
+					<LastSubmitContent contents={props.submitData.contents} />
 				</div>
 			</Dialog>
 		)
