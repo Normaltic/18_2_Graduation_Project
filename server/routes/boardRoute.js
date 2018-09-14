@@ -18,23 +18,21 @@ route.get('/:lNum', (req, res) => {
 	});
 
 	Board.findBoardList(lNum)
-	.then( (result) => {
-		res.status(200).json(result)
-	})
+	.then(res.status(200).json)
 	.catch( (err) => {
-		res.status(500).json({
-			error: err
-		});
+		console.log(err);
+		res.status(500).json(err);
 	});
 });
 
 route.post('/:lNum', (req, res) => {
 
-	let { lNum } = req.params;
-	let { bName } = req.body;
 	if( !req.decoded.is_teacher ) return res.status(401).json({
 		error: "PERMISSION DENIED"
 	});
+
+	let { lNum } = req.params;
+	let { bName } = req.body;
 
 	if( !bName ) return res.status(400).json({
 		error: "INVALID BOARD NAME"
@@ -59,9 +57,7 @@ route.post('/:lNum', (req, res) => {
 		})
 		.save();
 	})
-	.then( (result) => {
-		res.status(200).json(result);
-	})
+	.then(res.status(200).json)
 	.catch( (err) => {
 		console.log(err);
 		res.status(400).json(err);

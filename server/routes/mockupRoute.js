@@ -153,9 +153,7 @@ route.get('/keke', (req, res) => {
 			Board.insertMany(boardList),
 		]);
 	})
-	.then( (result) => {
-		res.status(200).json(result);
-	})
+	.then(res.status(200).json)
 	.catch( (err) => {
 		console.log(err);
 		res.status(500).json(err);
